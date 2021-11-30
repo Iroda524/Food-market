@@ -10,12 +10,12 @@ body{
     font-family: sans-serif;
 }
 
-@mixin hover{
-    &:hover{
-        color: #f5611c;
-        cursor: pointer;
-    }
-}
+// @mixin hover(){
+//     &:hover{
+//         color: #f5611c;
+//         cursor: pointer;
+//     }
+// }
 
 .box_top{
     width: 100%;
@@ -33,24 +33,36 @@ body{
         color: #12212a;
         font-weight: lighter;
         transition: $trn;
-        @include hover();
+        &:hover{
+            color: #f5611c;
+            cursor: pointer;
+        }
     }
 
     .logo{
-        text-align: center;
+        position: absolute;
+        top: 10px;
+        left: 600px;
+        &:hover{
+            cursor: pointer;
+        }
     }
 
     .contact{
+        height: 100px;
         position: absolute;
         right: 30px;
         padding: 20px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         p{
             display: inline-block;
         }
         p::before{
             position: absolute;
             top: 45px;
-            right: 360px;
+            right: 370px;
             content: '';
             width: 5px;
             height: 5px;
@@ -59,12 +71,15 @@ body{
         }
         b{
             padding: 18px;
-            @include hover;
+            &:hover{
+                color: #f5611c;
+                cursor: pointer;
+            }
         }
 
-        // img{
-        //     padding-top: 40px;
-        // }
+        .phone{
+            padding-left: 20px;
+        }
     }
 
     .bg{
@@ -99,6 +114,9 @@ body{
             width: 16px;
             height: 16px;
         }
+        &:hover{
+            opacity: 0.8;
+        }
     }
     .text{
         color: #363738;
@@ -121,12 +139,115 @@ body{
         strong{
             font-size: 2.5rem;
             color: #1f1e1c;
+            line-height: 70px;
         }
         small{
             font-size: 20px;
             font-weight: lighter;
             color: #182026;
             line-height: 25px;
+        }
+    }
+
+}
+
+.box_bottom{
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    position: relative;
+    h1{
+        font-size: 2.5rem;
+        color: #1f1e1c;
+        position: absolute;
+        top: 80px;
+        left: 500px;
+    }
+    button{
+        width: 120px;
+        height: 50px;
+        border: none;
+        border-radius: 24px;
+        margin: 150px 5px 0 5px;
+        color: #06070f;
+        background-color: #e7ebf0;
+        // font-weight: bolder;
+        font-size: 17px;
+        transition: $trn;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .first{
+        color: #fffffb;
+        background-color: #4aa0ed;
+    }
+}
+
+.basket{
+    display: flex;
+    position: sticky;
+    bottom: 10px;
+    right: 0;
+    align-items: center;
+    .kv{
+        width: 70px;
+        height: 40px;
+        background-color: #2d2d2c;
+        border-radius: 8px;
+        color: #fefee9;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    // .arrow{
+    //     width: 20px;
+    //     height: 20px;
+    //     background-color: #2d2d2c;
+    //     transform: rotate(-45deg);
+    //     position: absolute;
+    //     left: 55px;
+    //     top: 10px;
+    // }
+    #triangle-right {
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-left: 16px solid #2d2d2c;
+        border-bottom: 10px solid transparent;
+        position: absolute;
+        top: 15px;
+        left: 66px;
+        display: flex;
+    }
+
+    .box_basket{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #fcfcfb;
+        box-shadow: 1px 1px 10px #b6b6b6;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20px;
+        .two{
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: #ff5d1a;
+            color: #fcf1dc;
+            text-align: center;
+            position: absolute;
+            top: 30px;
+            right: 0px;
+        }
+        &:hover{
+            cursor: pointer;
         }
     }
 }

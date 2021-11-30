@@ -31,12 +31,21 @@ body {
   cursor: pointer;
 }
 .box_top .logo {
-  text-align: center;
+  position: absolute;
+  top: 10px;
+  left: 600px;
+}
+.box_top .logo:hover {
+  cursor: pointer;
 }
 .box_top .contact {
+  height: 100px;
   position: absolute;
   right: 30px;
   padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .box_top .contact p {
   display: inline-block;
@@ -44,7 +53,7 @@ body {
 .box_top .contact p::before {
   position: absolute;
   top: 45px;
-  right: 360px;
+  right: 370px;
   content: "";
   width: 5px;
   height: 5px;
@@ -57,6 +66,9 @@ body {
 .box_top .contact b:hover {
   color: #f5611c;
   cursor: pointer;
+}
+.box_top .contact .phone {
+  padding-left: 20px;
 }
 .box_top .bg {
   width: 100%;
@@ -91,6 +103,9 @@ body {
   width: 16px;
   height: 16px;
 }
+.box_top .box_plus:hover {
+  opacity: 0.8;
+}
 .box_top .text {
   color: #363738;
   font-weight: lighter;
@@ -112,12 +127,102 @@ body {
 .box_top .information strong {
   font-size: 2.5rem;
   color: #1f1e1c;
+  line-height: 70px;
 }
 .box_top .information small {
   font-size: 20px;
   font-weight: lighter;
   color: #182026;
   line-height: 25px;
+}
+
+.box_bottom {
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  position: relative;
+}
+.box_bottom h1 {
+  font-size: 2.5rem;
+  color: #1f1e1c;
+  position: absolute;
+  top: 80px;
+  left: 500px;
+}
+.box_bottom button {
+  width: 120px;
+  height: 50px;
+  border: none;
+  border-radius: 24px;
+  margin: 150px 5px 0 5px;
+  color: #06070f;
+  background-color: #e7ebf0;
+  font-size: 17px;
+  transition: 0.5 ease all;
+}
+.box_bottom button:hover {
+  cursor: pointer;
+}
+.box_bottom .first {
+  color: #fffffb;
+  background-color: #4aa0ed;
+}
+
+.basket {
+  display: flex;
+  position: sticky;
+  bottom: 10px;
+  right: 0;
+  align-items: center;
+}
+.basket .kv {
+  width: 70px;
+  height: 40px;
+  background-color: #2d2d2c;
+  border-radius: 8px;
+  color: #fefee9;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.basket #triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 16px solid #2d2d2c;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  top: 15px;
+  left: 66px;
+  display: flex;
+}
+.basket .box_basket {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fcfcfb;
+  box-shadow: 1px 1px 10px #b6b6b6;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+.basket .box_basket .two {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #ff5d1a;
+  color: #fcf1dc;
+  text-align: center;
+  position: absolute;
+  top: 30px;
+  right: 0px;
+}
+.basket .box_basket:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
